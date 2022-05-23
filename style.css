@@ -49,3 +49,17 @@ button:hover {
   background-color: #fff;
   color: rgb(62, 173, 91);
 }
+button:active {
+  background color: #000000);
+  color: rgb(105, 105, 105);
+  transform: translateY(2px);
+}
+button:focus {
+  outline color: transparent;
+  outline style: solid;
+  box-shadow: 0 0 0 1px rgb(62, 173, 91);
+  background: #000000;
+  color: rgb(105, 105, 105);
+}
+
+
