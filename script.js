@@ -1,3 +1,4 @@
+
 canvas = function() {
 
     hangman = document.getElementById("Hangman");

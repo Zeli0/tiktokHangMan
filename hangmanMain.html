@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"></link>
+        <script src="script.js" type="text/javascript"></script>
+        <title>Hangman Game</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="main-header">Welcome to Hangman</h1>
+            <h2>Guess the correct word</h2>
+
+            <!-- Hangman -->
+            <!-- Head -->
+            <canvas id="Hangman" width="400px" height="400px">
+                Your browser does not support the canvas element
+            </canvas>
+
+            <script> 
+                var head = document.getElementById("Hangman");
+                var ctx = head.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+                ctx.stroke();
+            </script>
+            <!-- Body -->
+
+            <script>
+                var body = document.getElementById("Hangman");
+                var ctx = body.getContext("2d");
+                ctx.moveTo(50, 90);
+                ctx.lineTo(50, 250);
+                ctx.stroke();
+            </script>
+
+            <!-- Arms -->
+
+            <script>
+                var arms = document.getElementById("Hangman");
+                var ctx = body.getContext("2d");
+                ctx.moveTo(0, 150);
+                ctx.lineTo(100, 150);
+                ctx.stroke();
+            </script>
+
+            <!-- Legs -->
+
+            <script>
+                var leg1 = document.getElementById("Hangman");
+                var ctx = body.getContext("2d");
+                ctx.moveTo(50, 250);
+                ctx.lineTo(120, 320);
+                ctx.moveTo(50, 250);
+                ctx.lineTo(0, 320)
+                ctx.stroke();
+            </script>
+
+
+
+            <br>
+            <!-- buttons -->
+            <button type="button"> A </button>
+            <button type="button"> B </button>
+            <button type="button"> C </button>
+            <button type="button"> D </button>
+            <button type="button"> E </button>
+            <button type="button"> F </button>
+            <button type="button"> G </button>
+            <button type="button"> H </button>
+            <button type="button"> I </button>
+            <button type="button"> J </button>
+            <button type="button"> K </button>
+            <button type="button"> L </button>
+            <button type="button"> M </button>
+            <button type="button"> N </button>
+            <br>
+            <button type="button"> O </button>
+            <button type="button"> P </button>
+            <button type="button"> Q </button>
+            <button type="button"> R </button>
+            <button type="button"> S </button>
+            <button type="button"> T </button>
+            <button type="button"> U </button>
+            <button type="button"> V </button>
+            <button type="button"> W </button>
+            <button type="button"> X </button>
+            <button type="button"> Y </button>
+            <button type="button"> Z </button>
+        </div>
+
+    </body>
+
+</html>

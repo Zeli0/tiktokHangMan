@@ -16,6 +16,25 @@ body {
   padding-top: 20px;
 }
 
+.box {
+  background: tomato;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.flex {
+  display: flex;
+}
+
 .wordlist {
   float: right;
   text-decoration: underline;
@@ -28,10 +47,11 @@ h1 {
 
 h2 {
   font-size: 30px;
+  
 }
 
 button {
-  background-color: rgb(62, 173, 91);
+  background-color: rgb(128, 0, 32);
   border: 5px;
   border-radius: 10%;
   color: whitesmoke;
@@ -49,11 +69,12 @@ button:hover {
   background-color: #fff;
   color: rgb(62, 173, 91);
 }
-button:active {
+button:disabled {
   background-color: #000000;
   color: rgb(105, 105, 105);
   transform: translateY(2px);
 }
+
 button:focus {
   outline-color: transparent;
   outline-style: solid;
