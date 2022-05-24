@@ -129,7 +129,7 @@ class Gather extends React.Component {
   render() {
     return (
     <div>
-      <h1>You have {this.state.lives} lives left.</h1>
+      {this.state.lives < 1 ? <h1>gg</h1> : <h1>You have {this.state.lives} lives left.</h1>}
       <div class="flex align-start justify-start">
         <Blanks  realWord={word} parentCallBack={this.edit} murder={this.updateLife}/>
       </div>
