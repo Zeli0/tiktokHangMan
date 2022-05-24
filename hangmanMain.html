@@ -14,7 +14,12 @@
         <div class="container">
             <h1 class="main-header">Welcome to Hangman</h1>
             <h2>Guess the correct word</h2>
-
+            <div class="float-right">Wrong Guesses: <span id="mistakes">0 </span>of<span id='maxWrong'></span></div>
+            <div class="text-center">
+                <p id="wordSpotlight">The word to be guessed goes here</p>
+                <div id=""keyboard"></div>
+                <button class="button">Reset   </button>
+            </div>
             <!-- Hangman -->
             <!-- Head -->
             <canvas id="Hangman" width="400px" height="400px">
