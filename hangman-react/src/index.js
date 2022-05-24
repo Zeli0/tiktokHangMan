@@ -20,7 +20,6 @@ function Letter(props) {
         return;
     }
     setDisabled(true);
-    console.log("Asdf");
     props.parentCallBack(abc);
     // Send     
   }
@@ -38,17 +37,25 @@ function Blanks(props) {
   const [displayWord, setDisplayWord] = useState(realWord.map((char) => "_"));
 
   const changeVis = (letter) => {
-    console.log("sothony sadtano");
     let isCorrect = false;
     let temp = displayWord.map((item) => item);
     for (let i = 0; i < realWord.length; i++) {
-      if (realWord[i] == letter) {        
+      if (realWord[i] == letter) {   
         temp[i] = letter;
         isCorrect = true;
       }
     }
     if (isCorrect) {
       setDisplayWord(temp);
+      let identical = true;
+      for (let i = 0; i < realWord.length; i++) {
+        if (realWord[i] != temp[i]) {
+          identical = false;
+        } 
+      }
+      if (identical) {
+        props.winner();
+      }
     } else {
       props.murder();
     }
@@ -72,35 +79,6 @@ function Alphabet(props) {
   })
 }
 
-/*function Gather() {
-  word = "abcdcba";
-  const [changeVis, setChangeVis] = useState(undefined);
-  const [lives, setLives] = useState(10);
-
-  const handleCallback = (childData) => {
-    changeVis(childData);
-  }
-
-  const edit = (childData) => {
-    setChangeVis(childData);
-  }
-  const updateLife = () => {
-    setLives(lives - 1);
-  }
-
-  return (
-    <div>
-      <h3>You have {lives} lives left.</h3>
-      <div class="flex align-start justify-start">
-        <Blanks  realWord={word} parentCallBack={edit} murder={updateLife}/>
-      </div>
-      <div>
-        <Alphabet parentCallBack={handleCallback} />
-      </div>
-    </div>
-    )
-} */
-
 
 class Gather extends React.Component {
   constructor(props) {
@@ -108,7 +86,8 @@ class Gather extends React.Component {
     word = "abcdcba";
     this.state = {
       changeVis : undefined,
-      lives : 10
+      lives : 10,
+      win : false
     }
   }
 
@@ -122,16 +101,23 @@ class Gather extends React.Component {
 
   updateLife = () => {
     let temp = this.state.lives;
-    console.log(temp);
     this.setState({lives : temp - 1});
+  }
+
+  youWin = () => {
+    this.setState({win : true});
   }
 
   render() {
     return (
     <div>
-      {this.state.lives < 1 ? <h1>gg</h1> : <h1>You have {this.state.lives} lives left.</h1>}
+      {this.state.lives < 1 ? 
+            <h1>gg</h1> 
+            : this.state.win ?
+              <h1>you win!</h1> 
+              :<h1>You have {this.state.lives} lives left.</h1>}
       <div class="flex align-start justify-start">
-        <Blanks  realWord={word} parentCallBack={this.edit} murder={this.updateLife}/>
+        <Blanks  realWord={word} parentCallBack={this.edit} murder={this.updateLife} winner={this.youWin}/>
       </div>
       <div>
         <Alphabet parentCallBack={this.handleCallback} />
