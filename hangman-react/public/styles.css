@@ -24,7 +24,7 @@ body {
 }
 
 .justify-start {
-  justify-content: start;
+  justify-content: center;
 }
 
 .align-start {
@@ -47,11 +47,10 @@ h1 {
 
 h2 {
   font-size: 30px;
-  
 }
 
 button {
-  background-color: rgb(128, 0, 32);
+  background-color: rgb(149, 37, 65);
   border: 5px;
   border-radius: 10%;
   color: whitesmoke;
@@ -67,20 +66,20 @@ button {
 
 button:hover {
   background-color: #fff;
-  color: rgb(62, 173, 91);
+  color: rgb(149, 37, 65);
+  border: solid 1px rgb(149, 37, 65);
 }
 button:disabled {
-  background-color: #000000;
-  color: rgb(105, 105, 105);
-  transform: translateY(2px);
+  background-color: rgb(149, 37, 65);
+  opacity: 0.4;
+  color: #fff;
+  transform: translateY(1px);
 }
 
-button:focus {
+button:active {
   outline-color: transparent;
   outline-style: solid;
-  box-shadow: 0 0 0 1px rgb(62, 173, 91);
-  background: #000000;
-  color: rgb(105, 105, 105);
+  /* box-shadow: 0 0 0 1px rgb(62, 173, 91); */
+  background-color: rgb(227, 184, 10);
+  color: #fff;
 }
-
-
