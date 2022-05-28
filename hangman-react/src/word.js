@@ -54,8 +54,8 @@ var country = [
   "Vietnam",
 ];
 
-// function randomWord() {
-//   return country[Math.floor(Math.random()*country.length)]
-// }
+function randomWord() {
+  return country[Math.floor(Math.random() * country.length)];
+}
 
-// export {randomWord}
+export { randomWord };

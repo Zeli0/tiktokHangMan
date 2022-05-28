@@ -1,5 +1,6 @@
 import React, { useState, createContext } from "react";
 import ReactDOM from "react-dom/client";
+import { randomWord } from "./word.js";
 //import Letter from "./Letter.js";
 //import Blank from "./Blank.js";
 
@@ -104,7 +105,7 @@ function Alphabet(props) {
 class Gather extends React.Component {
   constructor(props) {
     super(props);
-    word = "abcdcba";
+    word = randomWord();
     this.state = {
       changeVis: undefined,
       lives: 6,
@@ -133,7 +134,7 @@ class Gather extends React.Component {
     return (
       <div>
         {this.state.lives < 1 ? (
-          <h1>gg</h1>
+          <h1>Try again!</h1>
         ) : this.state.win ? (
           <h1>You win!</h1>
         ) : (
