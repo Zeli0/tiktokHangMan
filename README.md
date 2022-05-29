@@ -4,8 +4,8 @@ This is a web application of the classic game Hangman. Players click on the lett
 
 ## How to Run
 The following is a brief set of instructions on how to start up the hangman game.
-1. Run 'cd hangman-react'
-2. Run 'npm install' then 'npm run start' 
+1. Run `cd hangman-react`
+2. Run `npm install` then `npm run start` 
 3. The website should load as [localhost:3000](https://localhost:3000) on your web browser
 
 ## License
