@@ -36,67 +36,6 @@
 
       <!--Words Completed-->
       <!-- <h3 class="wordlist">Words Completed</h3> -->
-
-
-      <!-- Hangman -->
-      <!-- Head -->
-      <canvas id="Hangman" width="400px" height="400px">
-          Your browser does not support the canvas element
-      </canvas>
-
-      <script> 
-          var head = document.getElementById("Hangman");
-          var ctx = head.getContext("2d");
-          ctx.beginPath();
-          ctx.arc(50, 50, 40, 0, 2 * Math.PI);
-          ctx.stroke();
-      </script>
-      <!-- Body -->
-
-      <script>
-          var body = document.getElementById("Hangman");
-          var ctx = body.getContext("2d");
-          ctx.moveTo(50, 90);
-          ctx.lineTo(50, 250);
-          ctx.stroke();
-      </script>
-
-      <!-- Arms -->
-
-      <script>
-          var arms = document.getElementById("Hangman");
-          var ctx = body.getContext("2d");
-          ctx.moveTo(0, 150);
-          ctx.lineTo(100, 150);
-          ctx.stroke();
-      </script>
-
-      <!-- Legs -->
-
-      <script>
-          var leg1 = document.getElementById("Hangman");
-          var ctx = body.getContext("2d");
-          ctx.moveTo(50, 250);
-          ctx.lineTo(120, 320);
-          ctx.moveTo(50, 250);
-          ctx.lineTo(0, 320)
-          ctx.stroke();
-      </script>
-
-      <!-- Top, side, bottom -->
-      <script>
-        var top = document.getElementById("Hangman");
-        var ctx = body.getContext("2d");
-        ctx.moveTo(0, 0);
-        ctx.lineTo(400, 0);
-        ctx.moveTo(0, 0);
-        ctx.lineTo(0, 400);
-        ctx.moveTo(0, 400);
-        ctx.lineTo(400, 400);
-        ctx.moveTo(50, 0);
-        ctx.lineTo(50, 40);
-        ctx.stroke();
-      </script>
       
     </div>
     <div id="amogus"></div>

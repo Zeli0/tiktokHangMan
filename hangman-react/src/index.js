@@ -1,8 +1,10 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, Component } from "react";
 import ReactDOM from "react-dom/client";
 import { randomWord } from "./word.js";
 //import Letter from "./Letter.js";
 //import Blank from "./Blank.js";
+
+import Canvas from "./components/Canvas";
 
 var abcde = [
   "a",
@@ -67,7 +69,7 @@ function Blanks(props) {
       if (realWord[i].toLowerCase() == letter) {
         temp[i] = realWord[i];
         isCorrect = true;
-      }
+      } 
     }
     if (isCorrect) {
       setDisplayWord(temp);
@@ -102,7 +104,67 @@ function Alphabet(props) {
   });
 }
 
+/*const draw = (ctx) =>  {
+  ctx.moveTo(0, 0);
+  ctx.lineTo(200, 0);
+  ctx.stroke(); 
+}*/
+
+const gallows = (ctx) => {
+  ctx.moveTo(0, 0);
+  ctx.lineTo(200, 0);
+  ctx.moveTo(0, 0);
+  ctx.lineTo(0, 350);
+  ctx.moveTo(0, 350);
+  ctx.lineTo(200, 350);
+  ctx.moveTo(50, 0);
+  ctx.lineTo(50, 10);
+  ctx.stroke();
+}
+
+const head = (ctx) => {
+  ctx.beginPath();
+  ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+  ctx.stroke();
+} 
+
+const body = (ctx) => {
+  ctx.moveTo(50, 90);
+  ctx.lineTo(50, 250);
+  ctx.stroke();
+}
+
+const armLeft = (ctx) => {
+  ctx.moveTo(0, 150);
+  ctx.lineTo(50, 150);
+  ctx.stroke();
+}
+
+const armRight = (ctx) => {
+  ctx.moveTo(50, 150);
+  ctx.lineTo(100, 150);
+  ctx.stroke();
+}
+
+const legLeft = (ctx) => {
+  ctx.moveTo(50, 250);
+  ctx.lineTo(120, 320);
+  ctx.stroke();
+}
+
+const legRight = (ctx) => {
+  ctx.moveTo(50, 250);
+  ctx.lineTo(0, 320)
+  ctx.stroke();
+}
+
 class Gather extends React.Component {
+  
+  static defaultProps = {
+    images: [legRight, legLeft, armRight, armLeft, body, head, gallows]
+  }
+
+  
   constructor(props) {
     super(props);
     word = randomWord();
@@ -134,6 +196,7 @@ class Gather extends React.Component {
   render() {
     return (
       <div>
+        <Canvas draw = {this.props.images[this.state.lives]} height={400} width={400} />
         {this.state.lives < 1 ? (
           <h3>Try again!</h3>
         ) : this.state.win ? (
