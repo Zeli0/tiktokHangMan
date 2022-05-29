@@ -8,7 +8,7 @@ The following is a brief set of instructions on how to start up the hangman game
 2. Run cd hangman-react
 3. Open up terminal 
 4. Run npm install then npm run start 
-5. The website should load as (localhost:3000)[localhost:3000] on your web browser
+5. The website should load as (localhost:3000)[https://localhost:3000] on your web browser
 
 ## License
 
