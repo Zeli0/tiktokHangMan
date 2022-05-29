@@ -134,11 +134,11 @@ class Gather extends React.Component {
     return (
       <div>
         {this.state.lives < 1 ? (
-          <h1>Try again!</h1>
+          <h3>Try again!</h3>
         ) : this.state.win ? (
-          <h1>You win!</h1>
+          <h3>You win!</h3>
         ) : (
-          <h1>You have {this.state.lives} lives left.</h1>
+          <h3>You have {this.state.lives} lives left.</h3>
         )}
         <div class="flex align-start justify-start">
           <Blanks

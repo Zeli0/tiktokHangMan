@@ -13,7 +13,6 @@ body {
 .container {
   width: 800px;
   margin: 0 auto;
-  padding-top: 20px;
 }
 
 .box {
@@ -47,6 +46,10 @@ h1 {
 
 h2 {
   font-size: 30px;
+}
+
+h3 {
+  font-size: 40px;
 }
 
 button {
