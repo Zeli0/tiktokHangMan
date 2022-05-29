@@ -1,6 +1,6 @@
 # tiktokHangMan
 ## About
-This is a web application of the game Hangman. The application was programmed in React, HTML5, CSS and Javascript.
+This is a web application of the classic game Hangman. Players click on the letters to try and guess the secret word within 5 tries. The application was programmed in React, HTML5, CSS and Javascript.
 
 ## How to Run
 The following is a brief set of instructions on how to start up the hangman game.
