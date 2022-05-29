@@ -64,8 +64,8 @@ function Blanks(props) {
     let isCorrect = false;
     let temp = displayWord.map((item) => item);
     for (let i = 0; i < realWord.length; i++) {
-      if (realWord[i] == letter) {
-        temp[i] = letter;
+      if (realWord[i].toLowerCase() == letter) {
+        temp[i] = realWord[i];
         isCorrect = true;
       }
     }
@@ -106,6 +106,7 @@ class Gather extends React.Component {
   constructor(props) {
     super(props);
     word = randomWord();
+    console.log(word);
     this.state = {
       changeVis: undefined,
       lives: 6,
