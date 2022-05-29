@@ -2,6 +2,15 @@
 ## About
 This is a web application of the game Hangman. The application was programmed in React, HTML5, CSS and Javascript.
 
+## How to Run
+1. Open on visual studio code
+2. Run cd hangman-react
+3. Open up terminal 
+4. Run npm install then npm run start 
+5. The website should load as localhost:3000 on your web browser
+
+Alternatively, you may open the HTML file in a desktop with an already installed browser (Safari, Chrome, Microsoft Edge etc) and the website will be automatically launched in your browser.
+
 ## License
 
 MIT License
