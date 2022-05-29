@@ -10,8 +10,6 @@ The following is a brief set of instructions on how to start up the hangman game
 4. Run npm install then npm run start 
 5. The website should load as localhost:3000 on your web browser
 
-Alternatively, you may open the HTML file in a desktop with an already installed browser (Safari, Chrome, Microsoft Edge etc) and the website will be automatically launched in your browser.
-
 ## License
 
 MIT License
